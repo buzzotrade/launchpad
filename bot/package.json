@@ -1,0 +1,19 @@
+{
+  "name": "buzzo-launchpad-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Forkable Buzzo Telegram trading bot using the existing Buzzo platform and fee routing.",
+  "scripts": {
+    "start": "node bot/index.js",
+    "check": "node scripts/check.mjs",
+    "db:init": "node scripts/init-db.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ethers": "6.15.0",
+    "mysql2": "^3.18.2",
+    "qrcode": "^1.5.4",
+    "telegraf": "^4.16.3"
+  }
+}

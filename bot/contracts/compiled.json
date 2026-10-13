@@ -1,0 +1,254 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "reason",
+          "type": "bytes"
+        }
+      ],
+      "name": "CallFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FeeTransferFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidTrade",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotSelf",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Reentrant",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bool",
+          "name": "buy",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "grossBnb",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "platformFee",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "referralFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "AtomicTrade",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "target",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct BuzzoAtomicAccount.Call[]",
+          "name": "calls",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "gross",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "referred",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint16",
+              "name": "referralBps",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint256",
+              "name": "dollarWei",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct BuzzoAtomicAccount.Policy",
+          "name": "p",
+          "type": "tuple"
+        }
+      ],
+      "name": "buy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeReceiver",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "gross",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "referred",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint16",
+              "name": "referralBps",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint256",
+              "name": "dollarWei",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct BuzzoAtomicAccount.Policy",
+          "name": "p",
+          "type": "tuple"
+        }
+      ],
+      "name": "quoteFees",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "platform",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "referral",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "target",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct BuzzoAtomicAccount.Call[]",
+          "name": "calls",
+          "type": "tuple[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "referred",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint16",
+              "name": "referralBps",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint256",
+              "name": "dollarWei",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct BuzzoAtomicAccount.Policy",
+          "name": "p",
+          "type": "tuple"
+        }
+      ],
+      "name": "sell",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ]
+}
