@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /dev
+Disallow: /my-tokens
+Disallow: /api/
+Disallow: /preview/
+Disallow: /payments
+Disallow: /claim-fees
+Disallow: /claim$
+Disallow: /capital-flow
+
+Sitemap: https://buzzo.trade/sitemap.xml

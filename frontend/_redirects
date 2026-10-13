@@ -1,0 +1,4 @@
+/api/* https://buzzo.trade/api/:splat 200
+/token-logos/* https://buzzo.trade/token-logos/:splat 200
+/x-profiles/* https://buzzo.trade/x-profiles/:splat 200
+/* /index.html 200

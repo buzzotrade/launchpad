@@ -1,0 +1,19 @@
+.countdown-popup { max-width: 460px; width: calc(100vw - 32px); max-height: calc(100dvh - 32px); overflow-y: auto; border-top: 6px solid #f7c600 }
+.countdown-popup .cd-body { display: grid; gap: 16px; justify-items: center; text-align: center }
+.countdown-popup .brand-compact img { max-width: 100% }
+.countdown-popup .cd-lead { margin: 0; font-size: 15px; line-height: 1.5; opacity: .85 }
+.countdown-popup .cd-clock { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 100% }
+.countdown-popup .cd-unit { flex: 1 1 88px; min-width: 0; padding: 14px 8px 10px; border-radius: 14px; background: #ffd426; color: #17140a; border: 2px solid #17140a; box-shadow: 4px 4px 0 #17140a; display: grid; gap: 4px }
+.countdown-popup .cd-unit b { font-size: clamp(30px, 9vw, 44px); line-height: 1; font-variant-numeric: tabular-nums; font-weight: 800; overflow-wrap: anywhere }
+.countdown-popup .cd-unit span { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700 }
+.countdown-popup .cd-note { margin: 0; font-size: 12.5px; line-height: 1.5; opacity: .7 }
+.countdown-popup .cd-btn { width: 100%; justify-content: center }
+.countdown-popup .cd-bot { display: flex; align-items: center; min-height: 42px; text-decoration: none }
+.countdown-popup .cd-contract { width: 100%; min-width: 0; display: grid; gap: 10px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2) }
+.countdown-popup .cd-contract span { font-size: 12px; color: var(--muted) }
+.countdown-popup .cd-contract code { font-size: 13px; overflow-wrap: anywhere; user-select: all }
+.countdown-popup .cd-token-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; min-width: 0 }
+.countdown-popup .cd-token-links a { display: flex; justify-content: center; align-items: center; min-height: 42px; padding: 10px; text-decoration: none }
+.countdown-popup .cd-token-links .primary-button { grid-column: 1 / -1 }
+[data-theme='dark'] .countdown-popup .cd-unit { border-color: #ffd426; box-shadow: 4px 4px 0 rgba(255, 212, 38, .35) }
+@media (max-width: 420px) { .countdown-popup .cd-unit { flex-basis: 70px } }

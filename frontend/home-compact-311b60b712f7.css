@@ -1,0 +1,44 @@
+/* Compact the lower home cards without changing analytics pages or live values. */
+.home .hgrid3 .vcard .vc-visual {
+  height: 176px;
+  min-height: 176px;
+  padding: 12px;
+  flex: none;
+}
+.home .hgrid3 .an-metrics {
+  gap: 5px;
+}
+.home .hgrid3 .an-metrics > div {
+  padding: 5px 10px;
+  border-radius: 8px;
+  align-items: center;
+  gap: 8px;
+}
+.home .hgrid3 .an-metrics span {
+  font-size: .75rem;
+  line-height: 1.25;
+}
+.home .hgrid3 .an-metrics b {
+  font-size: .875rem;
+  line-height: 1.25;
+  flex-shrink: 0;
+}
+.home .hgrid3 .an-live {
+  font-size: .5625rem;
+  line-height: 1.25;
+}
+.home .hgrid3 .vc-panel {
+  padding: 4px 10px;
+}
+.home .hgrid3 .vc-kv {
+  padding: 6px 0;
+}
+.home .hgrid3 .vc-text {
+  padding: 12px 14px 14px;
+  flex: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home .hgrid3 .vcard {
+    animation: none;
+  }
+}
